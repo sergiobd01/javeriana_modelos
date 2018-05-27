@@ -1,0 +1,62 @@
+#%RAML 1.0
+title: Convenios
+version: 1.0.0
+baseUri: http://example.com/api/v1
+baseUriParameters: {}
+documentation:
+- title: Convenios
+  content: Convenios REST Services
+types:
+  Cadena:
+    displayName: cadena
+    type: object
+    properties:
+      cadenaNumeros:
+        required: true
+        displayName: cadenaNumeros
+        type: string
+/calculator:
+  /add:
+    get:
+      displayName: add
+      description: Suma los valores de la cadena
+      responses:
+        404:
+          description: Se deben indicar por lo menos dos números
+          body: {}
+        405:
+          description: Se requiere cadena de numeros
+          body: {}
+  /mult:
+    get:
+      displayName: mult
+      description: Multiplica los valores de la cadena
+      responses:
+        404:
+          description: Se deben indicar por lo menos dos números
+          body: {}
+        405:
+          description: Se requiere cadena de numeros
+          body: {}
+  /subs:
+    get:
+      displayName: subs
+      description: Resta los valores de la cadena
+      responses:
+        404:
+          description: Se deben indicar por lo menos dos números
+          body: {}
+        405:
+          description: Se requiere cadena de numeros
+          body: {}
+  /div:
+    get:
+      displayName: div
+      description: Divide los valores de la cadena
+      responses:
+        404:
+          description: Se deben indicar por lo menos dos números
+          body: {}
+        405:
+          description: Se requiere cadena de numeros
+          body: {}

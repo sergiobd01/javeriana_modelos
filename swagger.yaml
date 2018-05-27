@@ -1,0 +1,110 @@
+swagger: "2.0"
+info:
+  description: "Convenios REST Services"
+  version: "1.0.0"
+  title: "Convenios"
+basePath: "/api/v1"
+schemes:
+- "http"  
+paths:
+  /calculator/add:
+    get:
+      tags:
+      - "Calculadora"
+      summary: "Retorna la suma de los valores"
+      description: "Suma los valores de la cadena"
+      operationId: "add"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Cadena de numeros a operar"
+        required: true
+        schema:
+          $ref: "#/definitions/cadena"
+      responses:
+        404:
+          description: "Se deben indicar por lo menos dos números"
+        405:
+          description: "Se requiere cadena de numeros"
+  /calculator/mult:
+     get:
+      tags:
+      - "Calculadora"
+      summary: "Retorna la multiplicacion de los valores"
+      description: "Multiplica los valores de la cadena"
+      operationId: "mult"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Cadena de numeros a operar"
+        required: true
+        schema:
+          $ref: "#/definitions/cadena"
+      responses:
+        404:
+          description: "Se deben indicar por lo menos dos números"
+        405:
+          description: "Se requiere cadena de numeros"
+  /calculator/subs:
+     get:
+      tags:
+      - "Calculadora"
+      summary: "Retorna la resta de los valores"
+      description: "Resta los valores de la cadena"
+      operationId: "subs"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Cadena de numeros a operar"
+        required: true
+        schema:
+          $ref: "#/definitions/cadena"
+      responses:
+        404:
+          description: "Se deben indicar por lo menos dos números"
+        405:
+          description: "Se requiere cadena de numeros"
+  /calculator/div:
+     get:
+      tags:
+      - "Calculadora"
+      summary: "Retorna la division de los valores"
+      description: "Divide los valores de la cadena"
+      operationId: "div"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Cadena de numeros a operar"
+        required: true
+        schema:
+          $ref: "#/definitions/cadena"
+      responses:
+        404:
+          description: "Se deben indicar por lo menos dos números"
+        405:
+          description: "Se requiere cadena de numeros"
+definitions:
+  cadena:
+    type: "object"
+    required:
+    - "cadenaNumeros"
+    properties:
+      cadenaNumeros:
+        type: "string"
+        example: "1-2-4"
