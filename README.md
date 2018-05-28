@@ -20,6 +20,11 @@ docker run -p 7593:7593 seriobd/api:cal
 * Dividir: http://localhost:7593/api/v1/calculator/mult/1/2
 * Multiplicar: http://localhost:7593/api/v1/calculator/div/1/2
 
+## Contratos segunda tarea
+
+* swagger.yaml
+* Contrato.raml
+
 ## Detalles Tecnicos
 * NetBeans 8.1
 * Java: 1.8.0_161
